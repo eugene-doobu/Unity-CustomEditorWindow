@@ -1,12 +1,12 @@
 using System;
 
 #if UNITY_EDITOR
+using UnityEditor;
+using UnityEngine;
+
 
 namespace Base
 {
-    using UnityEditor;
-    using UnityEngine;
-    
     public class HelloEditorWindow : EditorWindow
     {
         private string _helloText = "Hello Editor Window";

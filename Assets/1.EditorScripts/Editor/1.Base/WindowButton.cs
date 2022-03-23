@@ -1,5 +1,4 @@
 #if UNITY_EDITOR
-using System;
 using UnityEditor;
 using UnityEngine;
 
@@ -11,7 +10,7 @@ namespace Base
         [MenuItem("CustomWindow/Base/WindowButton")]
         private static void Init()
         {
-            var window = GetWindow<WindowButton>();
+            var window = GetWindow<WindowButton>("Window Button");
             window.Show();
         }
         

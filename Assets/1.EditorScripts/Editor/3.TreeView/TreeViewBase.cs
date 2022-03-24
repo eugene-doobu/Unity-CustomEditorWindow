@@ -1,10 +1,12 @@
+#if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.IMGUI.Controls;
 using UnityEngine;
+using System.Reflection;
+using System;
 
-#if UNITY_EDITOR
 namespace TreeViewExample
 {
     // https://docs.unity3d.com/kr/2018.4/Manual/TreeViewAPI.html
@@ -37,7 +39,7 @@ namespace TreeViewExample
                 new TreeViewItem {id = 8, depth = 2, displayName = "Crocodile"},
                 new TreeViewItem {id = 9, depth = 2, displayName = "Lizard"},
             };
-                
+
             // Utility method that initializes the TreeViewItem.children and .parent for all items.
             SetupParentsAndChildrenFromDepths (root, allItems);
                 
@@ -45,6 +47,7 @@ namespace TreeViewExample
             return root;
         }
     }
+    
     public class TreeViewBase : EditorWindow
     {
         // SerializeField is used to ensure the view state is written to the window 

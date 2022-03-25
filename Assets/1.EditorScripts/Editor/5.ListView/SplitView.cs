@@ -7,12 +7,12 @@ using UnityEngine.UIElements;
 
 public class SplitView : EditorWindow
 {
-    [MenuItem("Tools/My Custom Editor")]
+    [MenuItem("CustomWindow/ListView/SplitView")]
     public static void ShowMyEditor()
     {
         // This method is called when the user selects the menu item in the Editor
         var wnd = GetWindow<SplitView>();
-        wnd.titleContent = new GUIContent("My Custom Editor");
+        wnd.titleContent = new GUIContent("Split View");
     }
     
     public void CreateGUI()
@@ -37,10 +37,6 @@ public class SplitView : EditorWindow
         leftPane.makeItem = () => new Label();
         leftPane.bindItem = (item, index) => {(item as Label).text = allObjects[index]; };
         leftPane.itemsSource = allObjects;
-
-        var propertyDict = new Dictionary<string, List<string>>();
-        propertyDict.Add("hi", new List<string>());
-        propertyDict["hi"].Add("hi");
     }
 }
 #endif

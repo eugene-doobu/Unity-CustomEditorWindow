@@ -79,7 +79,7 @@ namespace TreeViewExample
         {
             // Get existing open window or if none, make a new one:
             var window = GetWindow<TreeViewBase> ();
-            window.titleContent = new GUIContent ("My Window");
+            window.titleContent = new GUIContent ("Tree View");
             window.Show ();
         }
     }
